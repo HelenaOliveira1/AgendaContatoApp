@@ -5,4 +5,4 @@ class Telefone():
         self.numero = numero
         self.ddd = ddd
         self.codigoPais = codigoPais
-        listaTelefone = listaTelefone.append("(%i%i) %s")
+        listaTelefone = listaTelefone.append("(%i%i) %s"%(codigoPais, ddd, numero))
