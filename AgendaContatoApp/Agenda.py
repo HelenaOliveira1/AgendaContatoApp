@@ -7,11 +7,14 @@ class Agenda():
     def ContarContatos(self):
         print("Quantidade de Contatos: ")
 
-    def ListarContatos(self):
+def ListarContatos(self):
         print("Sua lista de Contatos: ")
+        for item in lista:
+            print(item)
 
     def IncluirContatos(self):
         print("Incluir novo contato: ")
+        lista += [contOBJ(Contato)]
 
     def ExcluirContato(self):
         print("Excluir Contato: ")
