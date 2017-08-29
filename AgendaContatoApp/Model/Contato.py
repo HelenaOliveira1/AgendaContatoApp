@@ -10,6 +10,8 @@ class Contato(Telefone):
         self.criacao = datetime.datetime.now()
         self.pessoa = Pessoa(nome, email, ano, mes, dia)
         super(Contato, self).__init__(numero, ddd, codigoPais)
+    
+    def AddContatos(self, self.pessoa, self.criacao, self.telefone, contagem, listaContato):
         listaContato = listaContato.append("Proprietário:", self.pessoa, "Criação:", self.criacao, "Telefone: ", self.telefone)
         contagem += 1
 
