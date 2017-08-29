@@ -11,4 +11,4 @@ class Contato(Telefone):
     def listarTelefones(self, listaTelefone):
         print("Seus Telefones salvos: ")
         for telefone in listaTelefone:
-            print(telefone)
+            print("Telefone: ", telefone)
