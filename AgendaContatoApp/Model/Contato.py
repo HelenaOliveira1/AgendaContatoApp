@@ -12,7 +12,7 @@ class Contato(Telefone):
         super(Contato, self).__init__(numero, ddd, codigoPais)
     
     def AddContatos(self, self.pessoa, self.criacao, self.telefone, contagem, listaContato):
-        listaContato = listaContato.append("Proprietário:", self.pessoa, "Criação:", self.criacao, "Telefone: ", self.telefone)
+        listaContato = listaContato.append(contagem, "- Proprietário:", self.pessoa, "Criação:", self.criacao, "Telefone: ", self.telefone)
         contagem += 1
 
     def listarTelefones(self, listaTelefone):
