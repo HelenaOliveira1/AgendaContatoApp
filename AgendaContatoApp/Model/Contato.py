@@ -13,11 +13,11 @@ class Contato(Telefone):
         super(Contato, self).__init__(numero, ddd, codigoPais)
     
     def AddContatos(self, self.pessoa, self.criacao, self.telefone, contagem, listaContato):
-        nome = input()
-        email = input()
-        nascimento = input()
-        nome,email,nascimento)
-        telefone = Telefone()
+        nome = input("Digite o nome do contato: ")
+        email = input("Digite Email do contato: ")
+        dia = input("Digite dia do nascimento: ")
+        mes = input("Digite mês do nascimento: ")
+        ano = input("Digite ano do nascimento: ")
         contato = Contato(nome,email,ano,mes,dia,listaTelefone)
         listaContato.append(contato)
     
