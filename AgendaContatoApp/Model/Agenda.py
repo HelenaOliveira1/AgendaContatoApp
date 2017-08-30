@@ -6,9 +6,9 @@ class Agenda(Contato):
     def __init__(self, nome, email, ano, mes, dia):
         self.proprietario = Pessoa(nome, email, ano, mes, dia)
 
-    def ContarContatos(self, contagem):
+    def ContarContatos(self, listaContato):
         print("Quantidade de Contatos: ")
-        return contagem
+        return (len(listaContato)+1)
 
     def ListarContatos(self, listaContato):
         print("Sua lista de Contatos: ")
@@ -30,4 +30,4 @@ class Agenda(Contato):
         ExclusaoContato(self, listaContato)
 
     def BuscaDeContato(self):
-        BuscaContato():    
+        BuscarContato():    
