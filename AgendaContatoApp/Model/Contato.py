@@ -2,10 +2,9 @@ import datetime
 from AgendaContatoApp.Model.Pessoa import Pessoa
 from AgendaContatoApp.Model.Telefone import Telefone
 
-listaContato = [[],[]]
+listaContato = []
 contagem = 0
 numLinhas= 0
-aux = 1
 
 class Contato(Telefone):
     def __init__(self, nome, email, ano, mes, dia, numero, ddd, codigoPais):
@@ -14,11 +13,14 @@ class Contato(Telefone):
         super(Contato, self).__init__(numero, ddd, codigoPais)
     
     def AddContatos(self, self.pessoa, self.criacao, self.telefone, contagem, listaContato):
-        numLinhas += 1 #número de linhas
-        for aux in range(numLinhas):
-            if (aux = numLinhas):
-                listaContato[numLinhas].append(contagem, "- Proprietário:", self.pessoa, "Criação:", self.criacao, "Telefone: ", self.telefone)
-        contagem += 1
+        nome = input()
+        email = input()
+        nascimento = input()
+        nome,email,nascimento)
+        telefone = Telefone()
+        contato = Contato(nome,email,ano,mes,dia,listaTelefone)
+        listaContato.append(contato)
+    
 
     def listarTelefones(self, listaTelefone):
         print("Seus Telefones salvos: ")
