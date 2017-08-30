@@ -30,6 +30,7 @@ class Contato(Telefone):
         print("Seus Telefones salvos: ")
         for telefone in listaTelefone:
             print("Telefone: ", telefone)
+            
     while True:
         try:
             def ExclusaoContato(self, listaContato):
@@ -57,4 +58,4 @@ class Contato(Telefone):
                             print(listaTelefone[miniaux]
                 
         Except:
-            print("bicho, que merda tu fez?")
+            print("Contato não Encontrado!")
