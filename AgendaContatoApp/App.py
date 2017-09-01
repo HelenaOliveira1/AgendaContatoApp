@@ -9,8 +9,8 @@ def main():
   op1 = int(input("1) Criar Agenda e seu proprietário\n2)Sair"))
   if (op1 == 1):
     Agenda()
-  while (op2 != 8):
-    op2 = int(input("1) Criar Agenda e seu proprietário\n2) Incluir novo Contato\n3) Listar todos os Contatos\n4) Remover Contato\n5) Buscar Contato\n6) Contar quantidade de contatos\n7) Extrair e Salvar Contato\n8) Sair"))
+  while (op2 != 7):
+    op2 = int(input("1) Criar Agenda e seu proprietário\n2) Incluir novo Contato\n3) Listar todos os Contatos\n4) Remover Contato\n5) Buscar Contato\n6) Contar quantidade de contatos\n7) Sair"))
     if (op2 == 1):
       Agenda()
     elif (op2 == 2):
@@ -24,8 +24,6 @@ def main():
     elif (op2 == 6):
       ContarContatos()
     elif (op2 == 7):
-      print("JAYSOM")
-    elif (op2 == 8):
        print("Programa Encerrado!") 
     else:
        print("Não Há Função!")
