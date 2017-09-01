@@ -14,13 +14,15 @@ class Contato(Telefone):
     
     while True:
         try:
-            def AddContatos(self, listaContato, listaelefone):
-                nome = str(input("Digite o nome do contato: "))
-                email = str(input("Digite Email do contato: "))
+            def AddContatos(self, listaContato, listaTelefone):
                 dia = str(input("Digite dia do nascimento: "))
                 mes = str(input("Digite mês do nascimento: "))
                 ano = str(input("Digite ano do nascimento: "))
-                contato = Contato(nome,email,ano,mes,dia,listaTelefone)
+                jaysom = jaysom.load("nome", "email", "telefone", "nascimento")
+                jaysom[nome] = str(input("Digite o nome do contato: "))
+                jaysom[email] = str(input("Digite Email do contato: "))
+                jaysom[telefone] = (str(codigoPais)+str(ddd)+str(numero))
+                jaysom[nascimento] = (str(dia)+str("/")+str(mes)+str("/")str(ano))
                 listaContato.append(contato)
                 print("Contato Adicionado!")
         
