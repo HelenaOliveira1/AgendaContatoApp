@@ -53,7 +53,7 @@ class Contato(Telefone):
                         print("Contato: ", listaContato[auxzinho][nome])
                         print("E-mail: ", listaContato[auxzinho][email])
                         print("Nascimento: ", listaContato[auxzinho][dia],listaContato[auxzinho][mes],listaContato[auxzinho][ano])
-                        print("Telefones:")
+                        print("Telefones:", listaContato[auxzinho][telefone])
                         for miniaux in listaTelefone:
                             print(listaTelefone[miniaux]
                 
