@@ -1,6 +1,7 @@
 import datetime
 from AgendaContatoApp.Model.Pessoa import Pessoa
 from AgendaContatoApp.Model.Telefone import Telefone
+import json
 
 listaContato = []
 numLinhas= 0
@@ -13,7 +14,7 @@ class Contato(Telefone):
     
     while True:
         try:
-            def AddContatos(self, listaContato):
+            def AddContatos(self, listaContato, listaelefone):
                 nome = str(input("Digite o nome do contato: "))
                 email = str(input("Digite Email do contato: "))
                 dia = str(input("Digite dia do nascimento: "))
