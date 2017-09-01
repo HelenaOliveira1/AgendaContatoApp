@@ -1,10 +1,10 @@
 {
   "contato":[
     {
-      "nome: ":""
-      "email: ":""
-      "telefone: ":""
-      "nascimento: ":""
+      "nome":""
+      "email":""
+      "telefone":""
+      "nascimento":""
     }
     ]
 }
