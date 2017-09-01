@@ -1,10 +1,10 @@
 {
   "contato":[
     {
-      "nome":"self.nome"
-      "email":"self.email"
-      "telefone":"self.telefone"
-      "nascimento":"self.nascimento"
+      "nome":""
+      "email":""
+      "telefone":""
+      "nascimento":""
     }
     ]
 }
