@@ -62,3 +62,4 @@ class Contato(Telefone):
                 
         Except:
             print("Contato não Encontrado!")
+            break
