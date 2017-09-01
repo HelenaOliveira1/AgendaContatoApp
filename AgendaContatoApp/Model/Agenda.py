@@ -1,6 +1,7 @@
 from AgendaContatoApp.Model.Pessoa import Pessoa
 from AgendaContatoApp.Model.Telefone import Telefone
 from AgendaContatoApp.Model.Contato import Contato
+import json
 
 class Agenda(Contato):
     def __init__(self, nome, email, ano, mes, dia):
