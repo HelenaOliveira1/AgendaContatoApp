@@ -16,13 +16,13 @@ class Agenda(Contato):
             print("Contato: ", listaContato[auxiliadora][nome])
             print("E-mail: ", listaContato[auxiliadora][email])
             print("Nascimento: ", listaContato[auxiliadora][dia],listaContato[auxiliadora][mes],listaContato[auxiliadora][ano])
-            print("Telefones:")
+            print("Telefones:", listaContato[auxiliadora][telefone])
             for miniaux in listaTelefone:
-                print(listaTelefone[auxiliadora]
+                print(listaTelefone[auxiliadora])
 
     def IncluirContatos(self,listaContato):
         print("Incluir novo contato: ")
-        AddContato():
+        AddContato()
         
 
     def ExcluirContato(self):
@@ -30,4 +30,4 @@ class Agenda(Contato):
         ExclusaoContato(self, listaContato)
 
     def BuscaDeContato(self):
-        BuscarContato():    
+        BuscarContato()    
