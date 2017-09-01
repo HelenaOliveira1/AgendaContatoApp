@@ -56,9 +56,9 @@ def main():
     def salvandoGeizo(self):       
             try:
                 jsonAgenda = open("agenda.json","w")
-                jsonStrinAgenda = self.agendaJson
-                jsonStrinAgenda = json.dumps(para_dict(Agenda))
-                jsonAgenda.write(jsonStrinAgenda)
+                jsonAgendaStr = self.agendaJson
+                jsonAgendaStr = json.dumps(para_dict(Agenda))
+                jsonAgenda.write(jsonAgendaStr)
             except:
     
     
