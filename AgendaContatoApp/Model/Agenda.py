@@ -5,7 +5,7 @@ Classe Agenda - define atributos de uma agenda e cria as funções necessárias
 from AgendaContatoApp.Model.Pessoa import Pessoa #importa classe Pessoa
 from AgendaContatoApp.Model.Telefone import Telefone #importa classe Telefone
 from AgendaContatoApp.Model.Contato import Contato #importa classe Contato
-import json #importa o json - leitor de arquivos em formato de dicionário
+
 
 class Agenda():
     def __init__(self, ano, mes, dia):
