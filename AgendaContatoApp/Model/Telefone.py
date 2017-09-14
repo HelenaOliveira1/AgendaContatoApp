@@ -14,7 +14,3 @@ class Telefone():
 
     def __str__(self): #Alterando método mágico __str__ de Telefone
         return self.telComplet
-
-
-
-

@@ -25,7 +25,10 @@ class Agenda():
 
     def IncluirContatos(self): #Inclui algum novo contato na Agenda
         print("Incluir novo contato: \n")
-        Contato()
+        dia = int(input("Digite dia do nascimento: "))
+        mes = int(input("Digite mês do nascimento: "))
+        ano = int(input("Digite ano do nascimento: "))
+        Contato(ano, mes, dia)
 
     def ExcluirContato(self, listaContato): #Exclui algum contato presente na Agenda
         print("Excluir Contato: \n")
@@ -43,4 +46,3 @@ class Agenda():
 
     def __str__(self):
         return ("Proprietário da Agenda: \n" + str(self.proprietario))
-

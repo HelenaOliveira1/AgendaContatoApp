@@ -10,35 +10,35 @@ import json #importa o json - leitor de arquivos em formato de dicionário
 
 #sessão de manipulação do Json
 
-def para_dict(obj)                                     #Função recursiva que bustra transformar os objetos diretamente em Json
- +        if hasattr(obj, '__dict__'):                              #inclusive os objetos de super classes e tudo mais
- +            obj =obj.__dict__           
- +        if isinstance(obj, dict):                                 
- +            return {k:para_dict(v) for k,v in obj.items()  }
- +        elif isinstance (obj, list) or isinstance (obj, tuple):
- +            return [para_dict (e) for e in obj]
- +        else:
- +            return obj
- +        
- +           
- +    def PreparandoGeizo(self):                                     #Definição da função que vai criar e ler o nosso arquivo Json
- +            try:
- +                jsonAgenda = open("agenda.json","r")
- +                self.agendaJson = json.load(jsonAgenda)
- +                print(self.agendaJson)
- +            except:
- +                print("erro no carregamento do arquivo")
- +
- +
- +    def salvandoGeizo(self):                                      #Definição da função que vai salvar os nossos objetos em um arquivo
- +                jsonAgenda = open("agenda.json","w")               # Para que possam ser abertos depois
- +                jsonStrinAgenda = self.agendaJson
- +                jsonStrinAgenda = json.dumps(para_dict(Agenda))          #Nesse monmento chamamos
- +                jsonAgenda.write(jsonStrinAgenda)                    #A função de conversão para que tudo possa ser salvo
-                  print("Arqivos salvos.")
+def para_dict(obj):                                    #Função recursiva que busca transformar os objetos diretamente em Json
+    if hasattr(obj, '__dict__'):                              #inclusive os objetos de super classes e tudo mais
+        obj =obj.__dict__
+    if isinstance(obj, dict):
+        return {k:para_dict(v) for k,v in obj.items()}
+    elif isinstance (obj, list) or isinstance (obj, tuple):
+        return [para_dict (e) for e in obj]
+    else:
+        return obj
+
+def PreparandoGeizo():                                     #Definição da função que vai criar e ler o nosso arquivo Json
+    try:
+        jsonAgenda = open("agenda.json","r",encoding="utf8")
+        agendaJson = json.loads(jsonAgenda.read())
+        print(agendaJson)
+    except:
+        print("Erro no carregamento do arquivo!")
+
+def salvandoGeizo(agendaJson):                                      #Definição da função que vai salvar os nossos objetos em um arquivo
+    jsonAgenda = open("agenda.json","w", encoding="utf8")               # Para que possam ser abertos depois
+    jsonStrinAgenda = agendaJson
+    jsonStrinAgenda = json.dumps(para_dict(Agenda))          #Nesse monmento chamamos
+    jsonAgenda.write(jsonStrinAgenda)                    #A função de conversão para que tudo possa ser salvo
+    print("Arqivos salvos.")
     
-def main():
-    while True:
+def main(Args = []):
+
+    auxiliar = True
+    while auxiliar:
 
         try:
             op2 = 2
@@ -67,13 +67,17 @@ def main():
                     elif (op2 == 5):
                         Agenda.ContarContatos(Contato.listaContato)
                     elif (op2 == 0):
-                        SalvandoGeizo()
+                        salvandoGeizo()
                         print("Programa Encerrado!")
                     else:
                         print("Não Há Função!")
 
-            else:
+            elif (op1 == 2):
                 print("Programa Encerrado!")
+                auxiliar = False
+
+            else:
+                print("Opção não encontrada!\n")
 
         except ValueError:
             print("Digite um número inteiro!")
