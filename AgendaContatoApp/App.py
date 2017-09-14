@@ -22,18 +22,13 @@ def para_dict(obj):                                    #Função recursiva que b
 
 def PreparandoGeizo():                                     #Definição da função que vai criar e ler o nosso arquivo Json
     try:
-        jsonAgenda = open("agenda.json","r",encoding="utf8")
+        jsonAgenda = open("agenda.json","rw",encoding="utf8")
         agendaJson = json.loads(jsonAgenda.read())
         print(agendaJson)
+        json.dump(agendaJson, jsonAgenda, ensure_ascii=False, indent=4)
     except:
         print("Erro no carregamento do arquivo!")
 
-def salvandoGeizo(agendaJson):                                      #Definição da função que vai salvar os nossos objetos em um arquivo
-    jsonAgenda = open("agenda.json","w", encoding="utf8")               # Para que possam ser abertos depois
-    jsonStrinAgenda = agendaJson
-    jsonStrinAgenda = json.dumps(para_dict(Agenda))          #Nesse monmento chamamos
-    jsonAgenda.write(jsonStrinAgenda)                    #A função de conversão para que tudo possa ser salvo
-    print("Arqivos salvos.")
     
 def main(Args = []):
 
@@ -67,8 +62,9 @@ def main(Args = []):
                     elif (op2 == 5):
                         Agenda.ContarContatos(Contato.listaContato)
                     elif (op2 == 0):
-                        salvandoGeizo()
+                        PreparandoGeizo()
                         print("Programa Encerrado!")
+                        auxiliar = False
                     else:
                         print("Não Há Função!")
 
